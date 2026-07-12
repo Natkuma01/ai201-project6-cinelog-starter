@@ -23,7 +23,12 @@
 
 ## Comment 3 — Missing test
 **What I did:**
+- Created a new test file `tests/test_watchlist.py`.
+- Wrote a test called `test_add_to_watchlist_nonexistent_film_raises` to verify that adding a nonexistent film raises a `FilmNotFoundError`.
+- Followed the same fixtures and assertion structure as `test_add_to_collection_nonexistent_film_raises` in `tests/test_collection.py`.
 **How I verified:**
+- Ran the command `pytest tests/test_watchlist.py -v` and confirmed that the test successfully passed.
+
 
 ## Comment 4 — Default visibility
 **My position:**
