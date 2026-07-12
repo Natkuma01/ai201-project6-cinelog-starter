@@ -1,0 +1,43 @@
+## AI Usage
+- Use AI to give me suggestion on commit message
+- Use AI to search a function and rename it, make sure after rename the project still run properly
+- Ask AI for improvement/refactor plan
+
+
+## Comment 1 — Rename
+**What I did:**
+- Renamed `save_to_watchlist()` to `add_to_watchlist()` in `services/watchlist_service.py` to match the project's verb_to_noun convention.
+- Updated all references and call sites across the application, including the blueprint routing.
+**How I verified:**
+- Verified that all imports and references use the new method name `add_to_watchlist()`.
+- Verified that existing tests and local server still run properly.
+
+## Comment 2 — Deduplication
+**What I did:**
+- Added deduplication logic to `add_to_watchlist()` in `services/watchlist_service.py` following the pattern from `add_to_collection()`.
+- Introduced `AlreadyInWatchlistError` exception which is raised if the film is already on the user's watchlist.
+- Caught `AlreadyInWatchlistError` (returning 409) and `FilmNotFoundError` (returning 404) in `routes/watchlist/watchlist.py`.
+**How I verified:**
+- Verified that trying to add a duplicate film raises `AlreadyInWatchlistError`.
+- Verified that the `/watchlist/<user_id>/add` route returns a 409 error when trying to add a film already on the watchlist.
+
+## Comment 3 — Missing test
+**What I did:**
+**How I verified:**
+
+## Comment 4 — Default visibility
+**My position:**
+**Reasoning:**
+**Tradeoff acknowledged:**
+
+## Comment 5 — Sort order
+**My position:**
+**Reasoning:**
+**Engagement with reviewer's point:**
+
+## Comment 6 — Rebase
+**What conflicted:**
+**How I resolved it:**
+**How I verified no conflict remains:**
+
+## PR Description
