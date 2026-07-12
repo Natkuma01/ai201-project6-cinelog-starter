@@ -32,8 +32,17 @@
 
 ## Comment 4 — Default visibility
 **My position:**
+- Keep the `public=True` default setting for the watchlist.
+
 **Reasoning:**
+- We are optimizing for social sharing and community interaction, which are core behaviors for a community film tracking app like CineLog.
+- It provides a frictionless experience for users to share their film lists with friends immediately.
+- It encourages discovery within the community as users can browse each other's lists by default.
+
 **Tradeoff acknowledged:**
+- The tradeoff is that user privacy is not protected by default; users who want a private watchlist must manually toggle the visibility setting.
+- The alternative (`public=False` by default) would protect user privacy first but would increase friction when sharing (e.g., users getting access errors when sharing links) and decrease list discovery across the community.
+
 
 ## Comment 5 — Sort order
 **My position:**
