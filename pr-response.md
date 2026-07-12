@@ -46,8 +46,16 @@
 
 ## Comment 5 — Sort order
 **My position:**
+- I agree with the feedback and will change the watchlist sorting to sort by date added (newest first).
+
 **Reasoning:**
+- We are optimizing for users who want to see their most recently added films at the top of their watchlist right away.
+- Placing new items at the top makes the app feel dynamic and active rather than static.
+- It reduces the effort required to check or manage the films the user has recently shown interest in.
+
 **Engagement with reviewer's point:**
+- I acknowledge that alphabetical sorting makes finding a specific, known movie title in a long list easier.
+- However, alphabetical sorting makes a growing list feel static, and users who need to find a specific title can still use the browser's search feature (Ctrl+F).
 
 ## Comment 6 — Rebase
 **What conflicted:**
