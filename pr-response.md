@@ -59,7 +59,18 @@
 
 ## Comment 6 — Rebase
 **What conflicted:**
+- The `.gitignore` file had a conflict because both the main branch and my branch added new lines to it at the same time.
+- The `WatchlistEntry` model was missing from `models.py` because the main branch moved all film IDs to UUIDs but did not have the watchlist feature yet.
+
 **How I resolved it:**
+- I opened the `.gitignore` file, combined the list of files to ignore from both branches, and deleted the git conflict lines.
+- I added the `WatchlistEntry` model back into `models.py` and changed `film_id` to use a UUID string instead of an integer.
+- I updated the watchlist service, routes, and tests to use UUID strings everywhere instead of numbers.
+
 **How I verified no conflict remains:**
+- I checked `git status` to make sure there are no conflict files left.
+- I ran `pytest` to make sure all 8 tests pass without any errors.
+- I checked the git history to make sure there are no extra merge commits.
+
 
 ## PR Description
